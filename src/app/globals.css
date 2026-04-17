@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9fa; /* Off-white/Gray */
+  --foreground: #1e293b; /* Slate 800 - dark text for light bg */
+  
+  /* AASTMT Brand Colors */
+  --aast-navy: #002855;
+  --aast-gold: #ffc72c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--aast-navy);
+  --color-secondary: var(--aast-gold);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a; /* Slate 900 */
+    --foreground: #f8f9fa; /* Light text for dark bg */
+    --aast-navy: #1e3a8a; /* Slightly lighter navy for dark mode visibility */
+    --aast-gold: #fbbf24;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
